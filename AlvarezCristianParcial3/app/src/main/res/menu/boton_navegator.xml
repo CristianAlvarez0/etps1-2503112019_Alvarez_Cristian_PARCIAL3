@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/nav_editar"
+        android:icon="@drawable/baseline_edit_24"
+        android:title="editar"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/nav_guardar"
+        android:icon="@drawable/baseline_save_24"
+        android:title="save"
+        app:showAsAction="ifRoom"
+        />
+
+    <item android:id="@+id/nav_busqNom"
+        android:title="Buscar nombre"
+        />
+
+    <item android:id="@+id/nav_busqApe"
+        android:title="Buscar apellido"
+        />
+    <item android:id="@+id/nav_busqTel"
+        android:title="Buscar por telefono"
+        />
+    <item android:id="@+id/nav_busqCor"
+        android:title="Buscar por correo"
+        />
+
+
+</menu>
