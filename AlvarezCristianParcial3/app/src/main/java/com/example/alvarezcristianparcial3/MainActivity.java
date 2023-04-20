@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
         btnDelete=findViewById(R.id.btnEliminar);
 
 
-
         btnNavega=findViewById(R.id.btnNav);
         btnNavega.setOnNavigationItemSelectedListener((BottomNavigationView.OnNavigationItemSelectedListener) navaListener);
     }
@@ -51,16 +50,14 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-           // Fragment seleccionFrag= null;
-
             switch (item.getItemId()) {
                 case R.id.btnInsertar:
                     btnInsert.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(getApplicationContext(), "bodega",null,2);
-
+                            AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(getApplicationContext(), "Parcial",null,2);
                             SQLiteDatabase bd= admin.getWritableDatabase();
+
                             String nom=txtedtNom.getText().toString();
                             String ape=txtedtApe.getText().toString();
                             String tel=txtedtTel.getText().toString();
@@ -73,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                             informacion.put("correo",corr);
 
                             try {
-                                bd.insert("productos", null, informacion);
+                                bd.insert("Contactos", null, informacion);
 
                                 Toast.makeText(getApplicationContext(), "Se inserto el producto", Toast.LENGTH_LONG).show();
                                 bd.close();
@@ -88,20 +85,14 @@ public class MainActivity extends AppCompatActivity {
 
                     return true;
                 case R.id.btnActualizar:
-                    // Lógica para la opción "Borrar"
+
                     return true;
                 case R.id.btnEliminar:
-                    // Lógica para la opción "Actualizar"
+
                     return true;
                 default:
                     return false;
             }
-
-
-
-
-           // getSupportFragmentManager().beginTransaction().replace(R.id.fragmentCont, seleccionFrag).commit();
-            //return true;
 
         }
 

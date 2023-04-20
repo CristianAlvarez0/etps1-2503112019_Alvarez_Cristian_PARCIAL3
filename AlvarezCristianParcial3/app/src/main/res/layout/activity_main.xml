@@ -59,13 +59,6 @@
         app:layout_constraintStart_toStartOf="@+id/edtTelefono"
         app:layout_constraintTop_toBottomOf="@+id/edtTelefono" />
 
-    <FrameLayout
-        android:id="@+id/fragmentCont"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="651dp" />
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/btnNav"
         android:layout_width="408dp"

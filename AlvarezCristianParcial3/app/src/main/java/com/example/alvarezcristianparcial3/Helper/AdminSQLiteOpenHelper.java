@@ -12,12 +12,12 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onCreate(SQLiteDatabase Parcial) {
-        Parcial.execSQL("CREATE TABLE Contactos (nombre text,apellido text,telefono integer, correo text)");
+    public void onCreate(SQLiteDatabase bd) {
+        bd.execSQL("CREATE TABLE Contactos (nombre text,apellido text,telefono integer, correo text)");
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase Parcial, int oldVersion, int newVersion) {
+    public void onUpgrade(SQLiteDatabase bd, int oldVersion, int newVersion) {
 
     }
 }
